@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo2.css">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<!-- Icone na Barra-->
+		<link rel="icon" href="../../icones/logo_icone.ico">
+		<!-- Icones -->
+		<script src="https://kit.fontawesome.com/b8373a4b3f.js" crossorigin="anonymous"></script>
+		<title>SM Mercearia | Congelados e Perecíveis</title>
+	</head>
+	<body>
+
+	<!-- <script>
+				
+		alert('Todas as Imgens do catálogo de produtos e do Banner são MERAMENTE ILUSTRATIVAS');
+
+	</script> -->
+	
+	<!-- Barra Top -->
+
+		<nav>
+			<ul>
+				<!-- <img id="logo" src="img/logo-sem-nome111.png" alt="Logo"> -->
+				<li style="margin-left: 25px;" id="back-color"><span>DEPARTAMENTOS</span>
+					<ul>
+						<a style="color: #A6A6A6;" href="../../pag/depar/alimentos.html"><li>Alimentos</li></a> 
+						
+						<a style="color: #A6A6A6;" href="../../pag/depar/bebidas.html"><li>Bebidas</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/padaria-confeitaria.html"><li>Padaria e Confeitaria</li></a>
+						<li style="background-color: green; cursor: context-menu;">Congelados e Perecíveis</li>
+						<!-- <a style="color: #A6A6A6;" href="../../pag/depar/congelados-pereciveis.html"><li>Congelados e Perecíveis</li></a> -->
+						<a style="color: #A6A6A6;" href="../../pag/depar/limpeza.html"><li>Limpeza</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/perfumaria-higiene.html"><li>Perfumaria e Higiene</li></a>
+					</ul>
+				</li>
+				<li style="margin-top: -2px;" class="barra-de-pesquisa">
+					<input id="pesquisa22" placeholder="O que você está procurando?" type="text" name="pesquisa"/>
+				</li>
+				<!-- <li><a href="#">(NOME DO LOGIN)</a></li> -->
+				<!-- <li><a href="pag/login.html"><input id="botao-login22" type="button" value="entrar"></a></li> -->
+				<li id="li-botao-compra"><a href="../../pag/carrinho.html"><input id="botao-carrinho-de-compras" type="button" value="Meu carrinho"></a></li>
+				<li><span>(NOME DO LOGIN)</span></li>
+				<li><a href="../../pag/entrar/login.html">LOGIN</a></li>
+			</ul>
+		</nav>
+
+
+	<!-- Barra Botton -->
+
+			<div class="cabeçario-botton">
+				<ul>
+					<a href="../../index.html">
+						<img style="margin-left: 70px; margin-top: 8px;" id="logo" src="../../img/logo.png" alt="Logo">
+					</a>
+					<li style="margin-top: 16px;">
+						<span style="margin-left: 15px;">SM Mercearia</span>
+					</li>
+				</ul>
+			</div>
+			
+		<script>
+			// Sistema de Borda hover da barra de pesquisa
+				var pesquisa22 = document.getElementById('pesquisa22');
+
+					pesquisa22.addEventListener('focus',()=>{
+						pesquisa22.style.borderColor = "green";
+					});
+					pesquisa22.addEventListener('blur',()=>{
+						pesquisa22.style.borderColor = "#4e4e53";
+					});
+		</script>
+		<br><br>
+
+	<!-- Cartalago -->
+
+			<!-- Java esquema do carrinho de compras -->
+		<script type="text/javascript" src="../../java-carrinho.js"></script>
+
+		<div id="apresenta-car">
+			<h2>Setor de Congelados e Perecíveis:</h2>
+			<h5>Todas as Imagens do catálogo de produtos são ILUSTRATIVAS</h5>
+		</div>	
+
+		<br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/margarina-doriana.jpg" alt="Margarina Doriana Extra Cremosa sem Sal">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Margarina Doriana Cremosa</p><p>Pote 500G</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 7,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade26"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Margarina Doriana Extra Cremosa sem Sal, Pote 500G ', document.getElementById('quantidade26').value, '7.99', 26)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/petit-suisse-danoniho.jpg" alt="Iogurte Petit Suisse 4 Danoninho">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Iogurte Danoninho</p><p>Bandeja 480g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 11,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade27"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Iogurte Petit Suisse 4 Danoninho, Bandeja 480g', document.getElementById('quantidade27').value, '11.99', 27)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/pizza-sadia.jpg" alt="Pizza com Queijo Sadia">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Pizza com Queijo Sadia</p><p>Caixa 460g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 17,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade28"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Pizza com Queijo Sadia, Caixa 460g ', document.getElementById('quantidade28').value, '17.99', 28)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/requijão-vigor.jpg" alt="Requeijão Cremoso Tradicional Vigor">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Requeijão Tradicional Vigor</p><p>Pote 500g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 16,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade29"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Requeijão Cremoso Tradicional Vigor, Pote 500gL ', document.getElementById('quantidade29').value, '16.99', 29)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/salsicha-hotdog-sadia.jpg" alt="Salsicha Hot-Dog Sadia">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Salsicha Hot-Dog Sadia</p><p>Pacote 500g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 10,95</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade30"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Salsicha Hot-Dog Sadia, Pacote 500g ', document.getElementById('quantidade30').value, '10.95', 30)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+		
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/azeitonavele-ferbil.jpg" alt="Azeitona Verde com Caroço Vale Fértil">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Azeitona com Caroço Vale Fértil 500g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 18,59</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade21"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Azeitona Verde com Caroço Vale Fértil, 500g ', document.getElementById('quantidade21').value, '18.59', 21)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/hamburgue-frimesa.jpg" alt="Hambúrguer de Carne Bovina Tradicional Frimesa">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Hambúrguer Tradicional Frimesa Caixa 672g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 29,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade22"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Hambúrguer de Carne Bovina Tradicional Frimesa, Caixa 672g', document.getElementById('quantidade22').value, '29.99', 22)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/lasanha-seara.jpg" alt="Lasanha Bolonhesa Seara Menu Gourmet">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Lasanha Bolonhesa Seara Menu Gourmet Caixa 350g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 9,29</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade23"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Lasanha Bolonhesa Seara Menu Gourmet, Caixa 350g ', document.getElementById('quantidade23').value, '9.29', 23)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/magarina-delicia.jpg" alt="Margarina Delícia">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Margarina Cremosa Delícia</p><p>Pote 500g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 7,69</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade24"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Margarina Delícia, Pote 500g ', document.getElementById('quantidade24').value, '7.69', 24)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/manteiga-santaclara.jpg" alt="Leite">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Manteiga com Sal Santa Clara</p><p>Embalagem 200G</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 10,50</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade25"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Manteiga com Sal Santa Clara, Embalagem 200G ', document.getElementById('quantidade25').value, '10.50', 25)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+		<br><br><br>
+
+		<br><br>
+
+	<!-- Rodape -->
+
+		<footer>
+			<div class="wrapper">
+				<div class="rodape-box">
+					<div class="logo-rodape">
+						<img width="60%" src="../../img/logo.png" alt="Logo">
+						<h2><b>SM Mercearia</b></h2>
+						<p>Pronto alimentício em geral.</p><br><br>
+						<p style="padding-top: 74px">Vanderlei Marquezin</p>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<div class="artigos-rodape">
+						<h2>Formas de Pagamento</h2>
+						<ul class="rodape-lista rodape-artigo-lista">
+							<li>
+								<p>Dinheiro ou débito e crédito.</p>
+								<p>Também aceitamos cartão alimentação refeição e restaurante.</p>
+								<span>
+									<img width="18%" style="padding-top: 15px; padding-left: 15px" src="../../img/bandeiras de cartões/mastercard.png">
+									<img width="28%" style="padding-bottom: 3px; padding-left: 12px" src="../../img/bandeiras de cartões/elo 2.png">
+									<img width="28%" style="padding-bottom: 12px; padding-left: 10px" src="../../img/bandeiras de cartões/visa.png">
+								</span>
+							</li>
+						</ul>
+						<h2 id="h2-hover" style="padding-top: 40px"><a href="../horario-atendimento.html">Horário de Atendimento</a></h2>
+						<h2  id="h2-hover" style="padding-top: 10px"><a href="../SAC.html">SAC</a></h2>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<h2>Siga-nos nas redes sociais</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.facebook.com" target="_blank">
+								<i class="fa-brands fa-facebook-square"></i>
+								<span >Facebook</span>
+							</a>
+							<a href="https://www.instagram.com" target="_blank">
+								<i style="margin-left: 53px" class="fa-brands fa-instagram-square"></i>
+								<span>Instagram</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Endereço</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.google.com/maps/place/SM+Mercearia/@-25.3841133,-49.2341483,15z/data=!4m5!3m4!1s0x0:0x2996bcd377053781!8m2!3d-25.3841133!4d-49.2341483" target="_blank">
+								<i class="fa-solid fa-location-dot"></i>
+								<span>Rua Fernando Noronha, 190 Santa Cândida</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Contatos</h2>
+					<ul class="rodape-lista">
+						<li id="whats">
+							<i class="fa-solid fa-square-phone"></i>
+							<span>(41) 3357-8376</span>
+							<i class="fa-brands fa-whatsapp-square"></i>
+							<span>(41) 99206-8350</span>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="rodape-final">
+				<div class="wrapper">
+					<p id="nomes-rodape">Eros Netto Antunes</p>
+					<p>João Vitor Ferreira Ribas</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

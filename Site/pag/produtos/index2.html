@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo2.css">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<!-- Icone na Barra-->
+		<link rel="icon" href="../../icones/logo_icone.ico">
+		<!-- Icones -->
+		<script src="https://kit.fontawesome.com/b8373a4b3f.js" crossorigin="anonymous"></script>
+		<title>SM Mercearia | Home</title>
+	</head>
+	<body>
+
+	<!-- <script>
+				
+		alert('Todas as Imgens do catálogo de produtos e do Banner são MERAMENTE ILUSTRATIVAS');
+
+	</script> -->
+	
+	<!-- Barra Top -->
+
+		<nav>
+			<ul>
+				<!-- <img id="logo" src="img/logo-sem-nome111.png" alt="Logo"> -->
+				<li style="margin-left: 25px;" id="back-color"><span>DEPARTAMENTOS</span>
+					<ul>
+						<a style="color: #A6A6A6;" href="../../pag/depar/alimentos.html"><li>Alimentos</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/bebidas.html"><li>Bebidas</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/padaria-confeitaria.html"><li>Padaria e Confeitaria</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/congelados-pereciveis.html"><li>Congelados e Perecíveis</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/limpeza.html"><li>Limpeza</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/perfumaria-higiene.html"><li>Perfumaria e Higiene</li></a>
+					</ul>
+				</li>
+				<li style="margin-top: -2px;" class="barra-de-pesquisa">
+					<input id="pesquisa22" placeholder="O que você está procurando?" type="text" name="pesquisa"/>
+				</li>
+				<!-- <li><a href="#">(NOME DO LOGIN)</a></li> -->
+				<!-- <li><a href="pag/login.html"><input id="botao-login22" type="button" value="entrar"></a></li> -->
+				<li id="li-botao-compra"><a href="../../pag/carrinho.html"><input id="botao-carrinho-de-compras" type="button" value="Meu carrinho"></a></li>
+				<li><span>(NOME DO LOGIN)</span></li>
+				<li><a href="../../pag/entrar/login.html">LOGIN</a></li>
+			</ul>
+		</nav>
+
+
+	<!-- Barra Botton -->
+
+			<div class="cabeçario-botton">
+				<ul>
+					<a href="../../index.html">
+						<img style="margin-left: 70px; margin-top: 8px;" id="logo" src="../../img/logo.png" alt="Logo">
+					</a>
+					<li style="margin-top: 16px;">
+						<span style="margin-left: 15px;">SM Mercearia</span>
+					</li>
+				</ul>
+			</div>
+			
+		<script>
+			// Sistema de Borda hover da barra de pesquisa
+				var pesquisa22 = document.getElementById('pesquisa22');
+
+					pesquisa22.addEventListener('focus',()=>{
+						pesquisa22.style.borderColor = "green";
+					});
+					pesquisa22.addEventListener('blur',()=>{
+						pesquisa22.style.borderColor = "#4e4e53";
+					});
+		</script>
+
+		<br>
+
+		<div id="apresenta-car">
+			<h2>Variedades de produtos</h2>
+			<h5>Todas as Imagens do catálogo de produtos são ILUSTRATIVAS</h5>
+		</div>
+
+		<br>
+
+	<!-- Cartalago -->
+
+			<!-- Java esquema do carrinho de compras -->
+		<script type="text/javascript" src="../../java-carrinho.js"></script>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/margarina-doriana.jpg" alt="Margarina Doriana Extra Cremosa sem Sal">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Margarina Doriana Cremosa</p><p>Pote 500G</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 7,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade26"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Margarina Doriana Extra Cremosa sem Sal, Pote 500G ', document.getElementById('quantidade26').value, '7.99', 26)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/petit-suisse-danoniho.jpg" alt="Iogurte Petit Suisse 4 Danoninho">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Iogurte Danoninho</p><p>Bandeja 480g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 11,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade27"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Iogurte Petit Suisse 4 Danoninho, Bandeja 480g', document.getElementById('quantidade27').value, '11.99', 27)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/pizza-sadia.jpg" alt="Pizza com Queijo Sadia">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Pizza com Queijo Sadia</p><p>Caixa 460g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 17,99</span><span id="cada">Cada</span><input style="margin-left: 13px" style="margin-left: 35px" type="number" value="1" min="1" max="20" id="quantidade28"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Pizza com Queijo Sadia, Caixa 460g ', document.getElementById('quantidade28').value, '17.99', 28)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/requijão-vigor.jpg" alt="Requeijão Cremoso Tradicional Vigor">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Requeijão Tradicional Vigor</p><p>Pote 500g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 16,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade29"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Requeijão Cremoso Tradicional Vigor, Pote 500gL ', document.getElementById('quantidade29').value, '16.99', 29)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/congelados-pereciveis/salsicha-hotdog-sadia.jpg" alt="Salsicha Hot-Dog Sadia">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Salsicha Hot-Dog Sadia</p><p>Pacote 500g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 10,95</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade30"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Salsicha Hot-Dog Sadia, Pacote 500g ', document.getElementById('quantidade30').value, '10.95', 30)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/padaria-confeitaria/ana-maria.jpg" alt="Bolo Recheado de Chocolate Ana Maria">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Bolo Recheado de Chocolate Ana Maria Pacote 35g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 2,39</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade31"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Bolo Recheado de Chocolate Ana Maria, Pacote 35g ', document.getElementById('quantidade31').value, '2.39', 31)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/padaria-confeitaria/ana-maria2.jpg" alt="Bolo Duplo Chocolate Ana Maria">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Bolo Duplo Chocolate Ana Maria Pacote 35g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 2,39</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade32"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Bolo Duplo Chocolate Ana Maria, Pacote 35g ', document.getElementById('quantidade32').value, '2.39', 32)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/padaria-confeitaria/pao-formapullman.jpeg" alt="Pão de Forma Tradicional Pullman">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Pão de Forma Tradicional Pullman Pacote 480g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 5,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade33"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Pão de Forma Tradicional Pullman, Pacote 480g ', document.getElementById('quantidade33').value, '5.99', 33)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/padaria-confeitaria/pao-santa-massa.jpg" alt="Pão de Alho Levemente Picante Santa Massa">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Pão de Alho Picante Santa Massa Bandeja 400g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 12,50</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade34"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Pão de Alho Levemente Picante Santa Massa, Bandeja 400g ', document.getElementById('quantidade34').value, '12.50', 34)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/padaria-confeitaria/pao-seven-boys.jpg" alt="Pão Bisnaguinha Original Seven Boys">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Pão Bisnaguinha Original Seven Boys Pacote 300g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 6,49</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade35"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Pão Bisnaguinha Original Seven Boys, Pacote 300g ', document.getElementById('quantidade35').value, '6.49', 35)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/closeup-dental.jpg" alt="Creme Dental Fresh Action Closeup">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Creme Dental Fresh Action Closeup Caixa 130g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 6,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade36"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Creme Dental Fresh Action Closeup, caixa 130g ', document.getElementById('quantidade36').value, '6.99', 36)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/colgate-rotal-12.jpg" alt="Creme Dental Colgate Total 12">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Creme Dental Colgate Total 12 Pacote 70G</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 9,59</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade37"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Creme Dental Colgate Total 12, Pacote 70G', document.getElementById('quantidade37').value, '9.59', 37)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/desodorante-oldspice.jpg" alt="Desodorante Old Spice Spray">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Desodorante Old Spice Spray</p><p>Frasco 150Ml</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 17,30</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade38"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Desodorante Old Spice Spray, Frasco 150Ml ', document.getElementById('quantidade38').value, '17.30', 38)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/escova-oral-b.jpg" alt="Kit Escova Dental Oral B">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Kit Escova Dental Oral B 3</p><p>3Un</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 10,19</span><span id="cada">Cada</span><input style="margin-left: 13px" style="margin-left: 35px" type="number" value="1" min="1" max="20" id="quantidade39"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Kit Escova Dental Oral B, 3Un ', document.getElementById('quantidade39').value, '10.19', 39)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/fio-dentl-colgate.jpg" alt="Fio Dental Colgate Total">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Fio Dental Colgate Total fino</p><p>50M</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 11,50</span><span id="cada">Cada</span><input style="margin-left: 13px" style="margin-left: 35px" type="number" value="1" min="1" max="20" id="quantidade40"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Fio Dental Colgate Total, 50M ', document.getElementById('quantidade40').value, '11.50', 40)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/listerine.jpg" alt="Antisséptico Bucal Listerine Zero">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Antisséptico Bucal Listerine</p><p>500Ml</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 20,90</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade41"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Antisséptico Bucal Listerine Zero, 500Ml ', document.getElementById('quantidade41').value, '20.90', 41)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/mach3-gillete.jpg" alt="Leite">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Gillette Mach3 Acqua-Grip</p><p>1Un</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 21,00</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade42"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Gillette Mach3 Acqua-Grip, 1Un', document.getElementById('quantidade42').value, '21.00', 42)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/sabonete-rexona.jpg" alt="Sabonete Rexona Aloe Fresh">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Sabonete Rexona Aloe Fresh</p><p>84g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 2,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade43"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Sabonete Rexona Aloe Fresh, 84g ', document.getElementById('quantidade43').value, '2.99', 43)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/shampo-pantene.jpg" alt="Shampoo Liso Extremo Pantene">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Shampoo Liso Pantene</p><p>200Ml</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 13,50</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade44"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Shampoo Liso Extremo Pantene, 200ml ', document.getElementById('quantidade44').value, '13.50', 44)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/perfumaria-higiene/shampo-seda.jpg" alt="Shampoo Cocriações Liso Perfeito Seda">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Shampoo Cocriações Seda</p><p>325ml</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 12,50</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade45"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Shampoo Cocriações Liso Seda, 325ml ', document.getElementById('quantidade45').value, '12.50', 45)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/agua-sanitaria.jpg" alt="Água Sanitária Ypê">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Água Sanitária Ypê</p><p>Garrafa 2L</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 8,59</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade46"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Água Sanitária Ypê, Garrafa 2L ', document.getElementById('quantidade46').value, '8.59', 46)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/amaciante-xodo.jpg" alt="Amaciante Girando Xodó">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Amaciante Girando Xodó</p><p>Garrafa 2L</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 7,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade47"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Amaciante Girando Xodó, Garrafa 2L ', document.getElementById('quantidade47').value, '7.99', 47)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/desodorizador-pato.jpg" alt="Detergente Sanitário Gel Adesivo Pato">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Detergente Sanitário Gel Adesivo Pato 38g</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 14,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade48"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Detergente Sanitário Gel Adesivo Pato, 38g ', document.getElementById('quantidade48').value, '14.99', 48)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/detergente-odd.jpg" alt="Detergente Odd Neutro">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Detergente Odd Neutro</p><p>500Ml</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 2,29</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade49"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Detergente Odd Neutro, 500ml ', document.getElementById('quantidade49').value, '2.29', 49)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/guardanapo-bistro-mili.jpg" alt="Leite">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Guardanapo Folha Dupla Mili</p><p>50Un</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 5,60</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade50"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Guardanapo Folha Dupla Mili, 50Un ', document.getElementById('quantidade50').value, '5.50', 50)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/papel-higienico-sublime.jpg" alt="Papel Higiênico Folha Dupla Sublime">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Papel Higiênico Folha Dupla Sublime 12 Un</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 17,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade51"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Papel Higiênico Folha Dupla Sublime, 12 Un ', document.getElementById('quantidade51').value, '17.99', 51)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/sabao-ariel.jpg" alt="Lava-Roupas Concentrado Ariel">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Lava-Roupas Concentrado Ariel Galão 2l</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 33,90</span><span id="cada">Cada</span><input style="margin-left: 13px" style="margin-left: 35px" type="number" value="1" min="1" max="20" id="quantidade52"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Lava-Roupas Concentrado Ariel, Galão 2l ', document.getElementById('quantidade52').value, '33.90', 52)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/sabao-omo.jpg" alt="Detergente Sanitário Gel Adesivo Pato">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Sabão em Pó Omo</p><p>Caixa 2,2Kg</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 34,89</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade53"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Sabão em Pó Omo, Caixa 2,2Kg ', document.getElementById('quantidade53').value, '34.89', 53)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/toalha-papel-maxim.jpg" alt="Detergente Odd Neutro">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Toalhas de Papel Maxim 2 Rolos C/60 Toalhas</p><p></p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 3,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade54"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Toalhas de Papel Maxim 2 Rolos, C/60 Toalhas ', document.getElementById('quantidade54').value, '3.99', 54)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/limpeza/vanish.jpg" alt="Tira Manchas Gel Vanish">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Tira Manchas Gel Vanish</p><p>500Ml</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 16,40</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade55"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tira Manchas Gel Vanish, 500Ml ', document.getElementById('quantidade55').value, '16.40', 55)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br><br>
+
+		<section class="area-pag-nu">
+			<div class="pag-nu">
+				<a href="../../index.html" id="a-pag2"><span>Página anterior |</span></a>
+				<a href="../../index.html" id="num-pag"><span>1</span></a> 
+				<!-- <span id="num-pag2">1</span> -->
+				<span id="num-pag2">2</span>
+				<span id="a-pag1">| Próxima página</span>
+			</div>
+		</section>
+
+		<br><br>
+
+	<!-- Rodape -->
+
+		<footer>
+			<div class="wrapper">
+				<div class="rodape-box">
+					<div class="logo-rodape">
+						<img width="60%" src="../../img/logo.png" alt="Logo">
+						<h2><b>SM Mercearia</b></h2>
+						<p>Pronto alimentício em geral.</p><br><br>
+						<p style="padding-top: 74px">Vanderlei Marquezin</p>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<div class="artigos-rodape">
+						<h2>Formas de Pagamento</h2>
+						<ul class="rodape-lista rodape-artigo-lista">
+							<li>
+								<p>Dinheiro ou débito e crédito.</p>
+								<p>Também aceitamos cartão alimentação refeição e restaurante.</p>
+								<span>
+									<img width="18%" style="padding-top: 15px; padding-left: 15px" src="../../img/bandeiras de cartões/mastercard.png">
+									<img width="28%" style="padding-bottom: 3px; padding-left: 12px" src="../../img/bandeiras de cartões/elo 2.png">
+									<img width="28%" style="padding-bottom: 12px; padding-left: 10px" src="../../img/bandeiras de cartões/visa.png">
+								</span>
+							</li>
+						</ul>
+						<h2 id="h2-hover" style="padding-top: 40px"><a href="../../pag/horario-atendimento.html">Horário de Atendimento</a></h2>
+						<h2  id="h2-hover" style="padding-top: 10px"><a href="../../pag/SAC.html">SAC</a></h2>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<h2>Siga-nos nas redes sociais</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.facebook.com" target="_blank">
+								<i class="fa-brands fa-facebook-square"></i>
+								<span >Facebook</span>
+							</a>
+							<a href="https://www.instagram.com" target="_blank">
+								<i style="margin-left: 53px" class="fa-brands fa-instagram-square"></i>
+								<span>Instagram</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Endereço</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.google.com/maps/place/SM+Mercearia/@-25.3841133,-49.2341483,15z/data=!4m5!3m4!1s0x0:0x2996bcd377053781!8m2!3d-25.3841133!4d-49.2341483" target="_blank">
+								<i class="fa-solid fa-location-dot"></i>
+								<span>Rua Fernando Noronha, 190 Santa Cândida</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Contatos</h2>
+					<ul class="rodape-lista">
+						<li id="whats">
+							<i class="fa-solid fa-square-phone"></i>
+							<span>(41) 3357-8376</span>
+							<i class="fa-brands fa-whatsapp-square"></i>
+							<span>(41) 99206-8350</span>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="rodape-final">
+				<div class="wrapper">
+					<p id="nomes-rodape">Eros Netto Antunes</p>
+					<p>João Vitor Ferreira Ribas</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

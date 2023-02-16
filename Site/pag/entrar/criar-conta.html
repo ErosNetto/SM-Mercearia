@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../css/login/estilo-criar-conta.css">
+        <!-- Icone na Barra-->
+		<link rel="icon" href="../../icones/logo_icone.ico">
+		<title>SM Mercearia | Cadastrar</title>
+    </head>
+	<body>
+		<section class="area-login">
+			<div class="login">
+				<div><a href="../../index.html"><img src="../../img/logo-verde.png" alt="Logo SM Mercearia"></a>
+				</div>
+				<form>
+					<div id="conta1">
+						<input type="text" id="nome" name="nome" placeholder="Nome Completo">
+						<input type="text" id="usuario" name="usuario" placeholder="Nome de usuario">
+					</div>
+
+					<div id="conta2">
+						<input type="text" id="datanascimento" name="data de nascimento" placeholder="Data de nascimento" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
+						<input type="text" id="cpf" name="cpf" placeholder="CPF" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+					</div>
+
+					<div id="conta3">
+						<input type="text" id="email" name="e-mail" placeholder="E-mail">
+						<input type="text" id="telefone" name="telefone" placeholder="Telefone" maxlength="13" OnKeyPress="formatar('##-#####-####', this)">
+					</div>
+
+					<div id="conta4">
+						<input type="password" id="senha1" name="senha" placeholder="Senha">
+						<input type="password" id="senha2" name="confirmar senha" placeholder="Confirmar senha">
+					</div>
+					<ul class="mostrar">
+						<li id="texto1">
+							<input type="checkbox" onclick="mostrarOcultarSenha()">
+						</li>
+						<li id="texto2">
+							<span>Mostrar senha</span>
+						</li>
+					</ul>
+					<input id="botao" type="button" value="Cadastrar" onclick="cadastrar()">
+				</form>
+				<span id="requesito"></span>
+				<span id="requesito2"></span>
+				<span id="requesito3"></span>
+				<span id="requesito4"></span>
+				<span id="requesito5"></span>
+				<span id="requesito6"></span>
+				<span id="requesito7"></span>
+				<span id="requesito8"></span>
+			</div>
+		</section>
+
+		<!-- script para mascara CPF, TEL, CEP -->
+		<script>
+			function formatar(mascara, documento){
+			  var i = documento.value.length;
+			  var saida = mascara.substring(0,1);
+			  var texto = mascara.substring(i)
+			  
+			  if (texto.substring(0,1) != saida){
+			            documento.value += texto.substring(0,1);
+			  } 
+			}
+		</script>
+
+		<script>
+				// validação cadastrar
+			let nome2 = document.querySelector('#nome')
+			let usuario2 = document.querySelector('#usuario')
+			let datanascimento2 = document.querySelector('#datanascimento')
+			let cpf2 = document.querySelector('#cpf')
+			let email2 = document.querySelector('#email')
+			let telefone2 = document.querySelector('#telefone')
+			let senha11 = document.querySelector('#senha1')
+			let senha22 = document.querySelector('#senha2')
+			let requesito = document.querySelector('#requesito')
+			let requesito2 = document.querySelector('#requesito2')
+			let requesito3 = document.querySelector('#requesito3')
+			let requesito4 = document.querySelector('#requesito4')
+			let requesito5 = document.querySelector('#requesito5')
+			let requesito6 = document.querySelector('#requesito6')
+			let requesito7 = document.querySelector('#requesito7')
+			let requesito8 = document.querySelector('#requesito8')
+			let validnome = false
+			let validusuario = false
+			let validdatanascimento = false
+			let validcpf = false
+			let validemail = false
+			let validtelefone = false
+			let validsenha1 = false
+			let validsenha2 = false
+
+			nome2.addEventListener('keyup', () => {
+				if (nome2.value.length <= 2){
+					nome2.style.borderColor = "red";
+					requesito.innerHTML = 'Nome *Insira no minimo 3 caracteres'
+					validnome = false
+				} else {
+					nome2.style.borderColor = "green";
+					requesito.innerHTML = ''
+					validnome = true
+				}
+			})
+
+			usuario2.addEventListener('keyup', () => {
+				if (usuario2.value.length <= 3){
+					usuario2.style.borderColor = "red";
+					requesito2.innerHTML = 'Nome de usuario *Insira no minimo 4 caracteres'
+					validusuario = false
+				} else {
+					usuario2.style.borderColor = "green";
+					requesito2.innerHTML = ''
+					validusuario = true
+				}
+			})
+
+			datanascimento2.addEventListener('keyup', () => {
+				if (datanascimento2.value.length <= 9){
+					datanascimento2.style.borderColor = "red";
+					requesito3.innerHTML = 'Data de nascimento *Incorreto'
+					validdatanascimento = false
+				} else {
+					datanascimento2.style.borderColor = "green";
+					requesito3.innerHTML = ''
+					validdatanascimento = true
+
+				}
+			})
+
+			cpf2.addEventListener('keyup', () => {
+				if (cpf2.value.length <= 13){
+					cpf2.style.borderColor = "red";
+					requesito4.innerHTML = 'CPF *Inválido'
+					validcpf = false
+				} else {
+					cpf2.style.borderColor = "green";
+					requesito4.innerHTML = ''
+					validcpf = true
+				}
+			})
+
+			email2.addEventListener('keyup', () => {
+				if (email2.value.length <= 13){
+					email2.style.borderColor = "red";
+					requesito5.innerHTML = 'E-mail *Insira um e-mail valido'
+					validemail = false
+				} else {
+					email2.style.borderColor = "green";
+					requesito5.innerHTML = ''
+					validemail = true
+				}
+			})
+
+			telefone2.addEventListener('keyup', () => {
+				if (telefone2.value.length <= 12){
+					telefone2.style.borderColor = "red";
+					requesito6.innerHTML = 'Telefone *Insira um telefone valido'
+					validtelefone = false
+				} else {
+					telefone2.style.borderColor = "green";
+					requesito6.innerHTML = ''
+					validtelefone = true
+				}
+			})
+
+			senha11.addEventListener('keyup', () => {
+				if (senha11.value.length <= 5){
+					senha11.style.borderColor = "red";
+					requesito7.innerHTML = 'Senha *Insira no minimo 6 caracteres'
+					validsenha1 = false
+				} else {
+					senha11.style.borderColor = "green";
+					requesito7.innerHTML = ''
+					validsenha1 = true
+				}
+			})
+
+			senha22.addEventListener('keyup', () => {
+				if (senha1.value != senha2.value){
+					senha22.style.borderColor = "red";
+					requesito8.innerHTML = 'Confirmar senha *As senhas não conferem'
+					validsenha2 = false
+				} else {
+					senha22.style.borderColor = "green";
+					requesito8.innerHTML = ''
+					validsenha2 = true
+				}
+			})
+
+				// Formato cpf, telefone mascara
+			function formatar(mascara, documento){
+			  var i = documento.value.length;
+			  var saida = mascara.substring(0,1);
+			  var texto = mascara.substring(i)
+			  
+			  if (texto.substring(0,1) != saida){
+			            documento.value += texto.substring(0,1);
+			  } 
+			}
+
+				 // Mostrar ou Ocultar a Senha
+			function mostrarOcultarSenha(){
+				var senha1=document.getElementById('senha1');
+				var senha2=document.getElementById('senha2');
+
+				if(senha1.type=="password"){
+					senha1.type="text";
+				}else{
+					senha1.type="password";
+				}
+
+				if(senha2.type=="password"){
+					senha2.type="text";
+				}else{
+					senha2.type="password";
+				}
+			}
+
+							// Botão cadastrar
+			function cadastrar(){
+				if(validnome && validusuario && validdatanascimento && validcpf && validemail && validtelefone && validsenha1 && validsenha2){
+					location.href = "../../index.html"
+				} else {
+					alert('Preencha todos os campos!')
+				}
+			}
+		</script>
+   </body>
+</html>

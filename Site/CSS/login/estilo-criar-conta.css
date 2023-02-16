@@ -1,0 +1,172 @@
+* {
+	margin: 0; 
+	padding: 0;
+}
+
+body {
+	background-color: #CDCDCD;
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+}
+
+.area-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #0b3d21;
+	border-radius: 10px;
+	width: 480px;
+	height: 500px;
+	padding-top: 5px;
+	padding-right: 35px;
+	padding-left: 35px;
+	padding-bottom: 90px;
+}
+
+.login form {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.login input[type="button"], input[type="password"], input[type="text"], button  {
+	margin-top: 10px;
+	background-color: #4e4e53;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #CBD0F7;
+	border: none;
+	height: 45px;
+	outline: none;
+	border-radius: 8px;
+	border: 1px solid #4e4e53;
+}
+
+.login img {
+	width: 120px;
+	height: auto;
+}
+
+.login input::placeholder {
+	color: #a6a6a6;
+	font-size: 12px;
+}
+
+#botao {
+	display: block;
+	background-color: #4e4e53;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.7s;
+	color: #a6a6a6 ;
+}
+
+#botao:hover {
+	background-color: green;
+}
+
+.login p, span {
+	font-size: 14px;
+	color: #a6a6a6;
+}
+
+.login h4 {
+	font-size: 14px;
+}
+
+.login a {
+	color: #5568FE;
+	text-decoration: none;
+	transition: 0.7s;
+}
+
+.login a:hover {
+	color: green;
+}
+
+
+.mostrar {
+	margin-top: 3px;
+	margin-bottom: 4px;
+}
+
+.mostrar input {
+	margin-left: 5px;
+	color: #4e4e53;
+}
+
+.mostrar span {
+	font-size: 13px;
+	margin-top: 40px;
+}
+
+ul {
+	list-style: none;
+	padding-top: -10px;
+}
+
+li {
+ 	padding-left: 3px;
+	display: block;
+	float: left;
+	position: relative;
+	text-decoration: none;
+	padding-bottom: 2px;
+}
+
+#texto2 {
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+#texto1 {
+	padding-top: 4px;
+}
+
+/* conteudo criar conta */
+
+#conta1 input {
+	width: 210px;
+}
+
+#nome {
+	margin-right: 11.8px;
+}
+
+#conta2 input {
+	width: 210px;
+}
+
+#datanascimento {
+	margin-right: 11.8px;
+}
+
+#conta3 input {
+	width: 210px;
+}
+
+#email {
+	margin-right: 11.8px;
+}
+
+#conta4 input {
+	width: 210px;
+}
+
+#senha1 {
+	margin-right: 11.8px;
+}
+
+#requesito, #requesito2, #requesito3, #requesito4, #requesito5, #requesito6, #requesito7, #requesito8 {
+	font-size: 12px;
+	color: red;
+}

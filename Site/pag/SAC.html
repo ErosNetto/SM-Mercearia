@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="../css/rodape/estilo-sac.css">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<!-- Icone na Barra-->
+		<link rel="icon" href="../icones/logo_icone.ico">
+		<!-- Icones -->
+		<script src="https://kit.fontawesome.com/b8373a4b3f.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../java-carrinho.js" defer></script>
+		<title>SM Mercearia | SAC</title>
+
+		<!-- script para mascara CPF, TEL, CEP -->
+		<script>
+			function formatar(mascara, documento){
+			  var i = documento.value.length;
+			  var saida = mascara.substring(0,1);
+			  var texto = mascara.substring(i)
+			  
+			  if (texto.substring(0,1) != saida){
+			            documento.value += texto.substring(0,1);
+			  } 
+			}
+		</script>
+
+	</head>
+	<body>
+
+	<!-- Barra Top -->
+
+		<nav>
+			<ul>
+				<!-- <img id="logo" src="img/logo-sem-nome111.png" alt="Logo"> -->
+				<li style="margin-left: 25px;" id="back-color"><span>DEPARTAMENTOS</span>
+					<ul>
+						<a style="color: #A6A6A6;" href="depar/alimentos.html"><li>Alimentos</li></a>
+						<a style="color: #A6A6A6;" href="depar/bebidas.html"><li>Bebidas</li></a>
+						<a style="color: #A6A6A6;" href="depar/padaria-confeitaria.html"><li>Padaria e Confeitaria</li></a>
+						<a style="color: #A6A6A6;" href="depar/congelados-pereciveis.html"><li>Congelados e Perecíveis</li></a>
+						<a style="color: #A6A6A6;" href="depar/limpeza.html"><li>Limpeza</li></a>
+						<a style="color: #A6A6A6;" href="depar/perfumaria-higiene.html"><li>Perfumaria e Higiene</li></a>
+					</ul>
+				</li>
+				<li style="margin-top: -2px;" class="barra-de-pesquisa">
+					<input id="pesquisa22" placeholder="O que você está procurando?" type="text" name="pesquisa"/>
+				</li>
+				<!-- <li><a href="#">(NOME DO LOGIN)</a></li> -->
+				<!-- <li><a href="pag/login.html"><input id="botao-login22" type="button" value="entrar"></a></li> -->
+				<li id="li-botao-compra"><a href="carrinho.html"><input id="botao-carrinho-de-compras" type="button" value="Meu carrinho"></a></li>
+				<li><span>(NOME DO LOGIN)</span></li>
+				<li><a href="entrar/login.html">LOGIN</a></li>
+			</ul>
+		</nav>
+
+
+	<!-- Barra Botton -->
+
+			<div class="cabeçario-botton">
+				<ul>
+					<a href="../index.html">
+						<img style="margin-left: 70px; margin-top: 8px;" id="logo" src="../img/logo.png" alt="Logo">
+					</a>
+					<li style="margin-top: 16px;">
+						<span style="margin-left: 15px;">SM Mercearia</span>
+					</li>
+				</ul>
+			</div>
+			
+			<script>
+			// Sistema de Borda hover da barra de pesquisa
+				var pesquisa22 = document.getElementById('pesquisa22');
+
+					pesquisa22.addEventListener('focus',()=>{
+						pesquisa22.style.borderColor = "green";
+					});
+					pesquisa22.addEventListener('blur',()=>{
+						pesquisa22.style.borderColor = "#4e4e53";
+					});
+		</script>
+		<br>
+	
+	<!-- SAC -->
+
+		<section class="area-SAC">
+			<div class="SAC">
+				<form>
+					<h1>Atendimento ao cliente - SAC</h1><br><br>
+
+					<p>1. Selecione o assunto que você deseja falar:</p>
+					<div class="assunto">
+						<input type="radio" id="tirar-duvida" name="tipo">
+						<label for="tecnico">Tirar dúvidas</label>
+						<input type="radio" id="Enviar sugestões" name="tipo">
+						<label for ="Professor">Enviar sugestões</label>
+						<input type="radio" id="Enviar elogios" name="tipo">
+						<label for ="Aluno">Enviar elogios</label>
+						<input type="radio" id="Enviar reclamações" name="tipo">
+						<label for ="Aluno">Enviar reclamações</label>
+						<input type= "radio" id="Outros" name="tipo">
+						<label for ="Aluno">Outros</label>
+					</div><br><br>
+
+					<p>2. Informe seus dados básicos:</p>
+					<div class="informe">
+						<input type="text" id="NomeCompleto" name="Nome Completo" placeholder="Nome Completo">
+						<input type="text" id="DatadeNascimento" name="DatadeNascimento" placeholder="Data de Nascimento" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
+						<br>
+						<input type="text" id="CPF" name="CPF" placeholder="CPF" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+						<input type="text" name="Telefone" placeholder="Telefone" maxlength="13" OnKeyPress="formatar('##-#####-####', this)" >
+						<br>
+						<input type="email" id="E-mail" name="E-mail" placeholder="E-mail"><br><br>
+					</div>
+
+					<p>3. Deixe sua mensagem:</p>
+					<div class="mensagem">
+						<label>
+							<textarea name="message" rows="5" cols="84" placeholder="Sua mensagem"></textarea><br>
+						</label>
+					</div>
+				</form>
+				<button id="refresh">Enviar</button>
+			</div>
+		</section>
+
+		<br>
+
+	<!-- Rodape -->
+
+		<footer>
+			<div class="wrapper">
+				<div class="rodape-box">
+					<div class="logo-rodape">
+						<img width="60%" src="../img/logo.png" alt="Logo">
+						<h2><b>SM Mercearia</b></h2>
+						<p>Pronto alimentício em geral.</p><br><br>
+						<p style="padding-top: 74px">Vanderlei Marquezin</p>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<div class="artigos-rodape">
+						<h2>Formas de Pagamento</h2>
+						<ul class="rodape-lista rodape-artigo-lista">
+							<li>
+								<p>Dinheiro ou débito e crédito.</p>
+								<p>Também aceitamos cartão alimentação refeição e restaurante.</p>
+								<span>
+									<img width="18%" style="padding-top: 15px; padding-left: 15px" src="../img/bandeiras de cartões/mastercard.png">
+									<img width="28%" style="padding-bottom: 3px; padding-left: 12px" src="../img/bandeiras de cartões/elo 2.png">
+									<img width="28%" style="padding-bottom: 12px; padding-left: 10px" src="../img/bandeiras de cartões/visa.png">
+								</span>
+							</li>
+						</ul>
+						<h2 id="h2-hover" style="padding-top: 40px"><a href="horario-atendimento.html">Horário de Atendimento</a></h2>
+						<!-- <h2  id="h2-hover" style="padding-top: 10px"><a href="pag/SAC.html">SAC</a></h2> -->
+					</div>
+				</div>
+				<div class="rodape-box">
+					<h2>Siga-nos nas redes sociais</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.facebook.com" target="_blank">
+								<i class="fa-brands fa-facebook-square"></i>
+								<span >Facebook</span>
+							</a>
+							<a href="https://www.instagram.com" target="_blank">
+								<i style="margin-left: 53px" class="fa-brands fa-instagram-square"></i>
+								<span>Instagram</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Endereço</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.google.com/maps/place/SM+Mercearia/@-25.3841133,-49.2341483,15z/data=!4m5!3m4!1s0x0:0x2996bcd377053781!8m2!3d-25.3841133!4d-49.2341483" target="_blank">
+								<i class="fa-solid fa-location-dot"></i>
+								<span>Rua Fernando Noronha, 190 Santa Cândida</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Contatos</h2>
+					<ul class="rodape-lista">
+						<li id="whats">
+							<i class="fa-solid fa-square-phone"></i>
+							<span>(41) 3357-8376</span>
+							<i class="fa-brands fa-whatsapp-square"></i>
+							<span>(41) 99206-8350</span>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="rodape-final">
+				<div class="wrapper">
+					<p id="nomes-rodape">Eros Netto Antunes</p>
+					<p>João Vitor Ferreira Ribas</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

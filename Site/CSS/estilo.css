@@ -1,0 +1,508 @@
+	/* Geral */
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #CDCDCD;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+	/* Cabeçario bottom*/
+.cabeçario-botton img {
+	width: 10.5%;
+	float: left;
+}
+
+.cabeçario-botton {
+	padding-top: 55px;
+	position: relative;
+	padding-bottom: 20px;
+	width: 100%;
+	height: 70px;
+	background-color: #2B2929;
+	border-bottom: 4px solid black;
+}
+
+.cabeçario-botton li {
+	background-color: #2B2929;
+	display: block;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+}
+
+.cabeçario-botton span {
+	margin-left: 45px;
+	font-size: 30px;
+	font-family: 'Antonio', sans-serif;
+	font-size: 700;
+	color: #A6A6A6;
+	background-color: #2B2929;
+}
+
+	/* Cabeçario top*/
+
+nav {
+	color: #A6A6A6;
+	padding-top: 2px;
+	margin-top: 0px;
+	position: fixed;
+	width: 100%;
+	height: 54px;
+	z-index: 1;
+	background-color: #0b3d21;
+	border-bottom: 4px solid black;
+}
+
+#back-color span:hover {
+	color: green;
+}
+
+#carrinho {
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+}
+
+nav ul {
+	color: #A6A6A6;
+	list-style: none;
+	padding-left: 0;
+}
+
+nav li {
+	background-color: #0b3d21;
+	display: block;
+	color: #A6A6A6;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
+	/*	margin: 0 15px; */
+}
+
+nav li a {
+	text-decoration: none;
+	color: #A6A6A6;
+	transition: 0.5s;
+}
+
+nav ul li ul {
+	color: #A6A6A6;
+	visibility: hidden;
+	opacity: 0;
+	min-width: 5rem;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-top: 1rem;
+	left: 0;
+	display: none;
+}
+
+nav ul li ul li {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 40px;
+	margin-right: 40px;
+	border-bottom: 1px solid black;
+}
+
+nav li ul li {
+	clear: both;
+	width: 100%;
+}
+
+#back-color ul li:hover, #back-color ul li:focus-within {
+	background-color: green;
+ 	cursor: pointer;
+ 	transition: 0.3s;
+}
+
+nav a:hover {
+	color: green;
+}
+
+/* Menu suspenso */
+nav li:hover>ul, nav li:focus-within>ul, nav li ul:hover, nav li ul:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+#pesquisa22:hover {
+	border-color: green;
+}
+
+.barra-de-pesquisa input {
+	margin-right: 400px;
+	margin-top: 1px;
+	margin-bottom: -11px;
+	background-color: #4e4e53;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #CBD0F7;
+	width: 260px;
+	height: 25px;
+	outline: none;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#pesquisa22 {
+	border: 1px solid #0b3d21;
+}
+
+#botao-carrinho-de-compras {
+	color: #A6A6A6;
+	width: 100px;
+	height: 25px;
+	border-radius: 7px;
+	border: none;
+	outline: none;
+	margin-top: -3px;
+	background-color: #4e4e53;
+	font-size: 15px;
+	transition: 0.5s;
+	margin-bottom: 5px solid black;
+}
+
+#li-botao-compra {
+	margin-top: -2px;
+	margin-bottom: 4px;
+}
+
+.barra-de-pesquisa input::placeholder {
+	color: #A6A6A6;
+	font-size: 11px;
+}
+
+#li-botao-compra input:hover {
+	background-color: green;
+}
+
+	/* H2 apresenta cartalogo */
+
+#apresenta-car {
+	margin-top: 2px;
+	height: 40px;
+	width: 975px;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#apresenta-car h2 {
+	color: #2B2929;
+	font-weight: 700;
+}
+
+	/* Cartalogo de produtos*/
+
+section {
+	width: 100%;
+}
+
+#cada {
+	font-size: 12px;
+	color: green;
+	margin-left: 3px;
+}
+
+.area-cartalogo {
+	display: flex;
+	margin-top: 2px;
+	height: 250px;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cartalogo-box  {
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	border-radius: 10px;
+	width: 172px;
+	height: 295px;
+	padding-top: 12px;
+	padding-right: 9px;
+	padding-left: 9px;
+	padding-bottom: 15px;
+}
+
+.cartalogo-box form {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.cartalogo-box button {
+	background-color: #4e4e53;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #a6a6a6;
+	border: none;
+	height: 30px;
+	outline: none;
+	text-align: center;
+	margin-left: 4px;
+	border-radius: 15px;
+}
+
+.cartalogo-box input[type="number"] {
+	color: #a6a6a6;
+	border-radius: 3px;
+	border: 1px solid #4e4e53;
+	outline: none;
+	margin-left: 48px;
+	margin-bottom: 16px;
+	transition: 0.5s;
+}
+
+.quantidade-es input:hover {
+	background-color: green;
+}
+
+.cartalogo-box img {
+	width: 170px;
+	height: auto;
+	margin-top: -4px;
+	margin-bottom: 0px;
+}
+
+.botao button {
+	display: block;
+	background-color: #4e4e53;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+	margin-top: 5px;
+}
+
+.quantidade-es input{
+	background-color: #4e4e53;
+	cursor: pointer;
+	margin-top: 15px;
+	width: 40px;
+	height: 20px;
+}
+
+.botao button:hover {
+	background-color: green;
+}
+
+.cartalogo-box p {
+	font-size: 12px;
+	color:  #4e4e53;
+}
+
+.informa {
+	margin-top: 0px;
+}
+
+.informa ul {
+	list-style: none;
+	padding-top: 0px;
+}
+
+.informa ul li p {
+ 	padding-left: 5px;
+	display: block;
+	float: left;
+	position: relative;
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+.preco {
+	margin-top: 0px;
+	margin-bottom: -7px;
+}
+
+.preco ul span {
+	color: green;
+	font-weight: 800;
+	font-size: 20px;
+}
+
+
+
+/* Rodape Novo */
+
+footer {
+	background-color: #2b2929;
+	padding-top: 3em;
+	padding-bottom: 20px;
+	border-top: 4px solid black;
+}
+
+footer h2, footer p, footer a, footer span { 
+	color: #a6a6a6;
+}
+
+#whats {  
+	color: #a6a6a6;
+}
+
+#h2-hover a:hover {
+	color: green;
+}
+
+#h2-hover {
+	transition: 0.5s;
+}
+
+footer h2 {
+	font-weight: 400;
+}
+
+footer a {
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+footer ul {
+	padding: 0;
+}
+
+footer li {
+	list-style: none;
+}
+
+.rodape-box {
+	width: 31%;
+	padding: 1%;
+	float: left;
+}
+
+footer .wrapper:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.logo-rodape {
+	width: 30%;
+	margin-left: 60px;
+}
+
+.logo-rodape h2 {
+	margin-top: 15px;
+}
+
+.logo-rodape h2, .logo-rodape p {
+	margin-bottom: -1px;
+	margin-right: -100px;
+}
+
+.rodape-lista li {
+	margin-bottom: 15px;
+}
+
+.rodape-lista a {
+	transition: 0.5s;
+}
+
+.rodape-lista a:hover {
+	color: green;
+}
+
+.rodape-lista li:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.artigos-rodape {
+	width: 80%;
+}
+
+.rodape-lista.rodape-artigo-lista span {
+	display: block;
+	float: none;
+}
+
+.fa-brands, .fa-solid {
+	padding-top: 2px;
+	margin-left: 15px;
+	font-size: 27px;
+	margin-right: 8px;
+	float: left;
+}
+
+.rodape-lista li span {
+	float: left;
+	height: 30px;
+	line-height: 31px;
+}
+
+.rodape-final {
+	border-top: 1px solid #a6a6a6;
+}
+
+.rodape-final p {
+	margin-left: 60px;
+	font-weight: 600;
+}
+
+#nomes-rodape {
+	margin-top: 20px;
+}
+
+
+/* passar a pagina */
+
+.area-pag-nu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+.pag-nu a {
+	color: #a6a6a6;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.pag-nu span {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#num-pag span{
+	margin: 0 15px;
+}
+
+.pag-nu a:hover {
+	color: green;
+}
+
+#a-pag1, #a-pag2 span{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#a-pag1 {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#num-pag2 {
+	color: green;
+}

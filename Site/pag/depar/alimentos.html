@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo2.css">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<!-- Icone na Barra-->
+		<link rel="icon" href="../../icones/logo_icone.ico">
+		<!-- Icones -->
+		<script src="https://kit.fontawesome.com/b8373a4b3f.js" crossorigin="anonymous"></script>
+		<title>SM Mercearia | Alimentos</title>
+	</head>
+	<body>
+
+	<!-- <script>
+				
+		alert('Todas as Imgens do catálogo de produtos e do Banner são MERAMENTE ILUSTRATIVAS');
+
+	</script> -->
+	
+	<!-- Barra Top -->
+
+		<nav>
+			<ul>
+				<!-- <img id="logo" src="img/logo-sem-nome111.png" alt="Logo"> -->
+				<li style="margin-left: 25px;" id="back-color"><span>DEPARTAMENTOS</span>
+					<ul>
+						<!-- <a style="color: #A6A6A6;" href="../../pag/depar/alimentos.html"><li>Alimentos</li></a> -->
+						<li style="background-color: green; cursor: context-menu;">Alimentos</li>
+						<a style="color: #A6A6A6;" href="../../pag/depar/bebidas.html"><li>Bebidas</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/padaria-confeitaria.html"><li>Padaria e Confeitaria</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/congelados-pereciveis.html"><li>Congelados e Perecíveis</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/limpeza.html"><li>Limpeza</li></a>
+						<a style="color: #A6A6A6;" href="../../pag/depar/perfumaria-higiene.html"><li>Perfumaria e Higiene</li></a>
+					</ul>
+				</li>
+				<li style="margin-top: -2px;" class="barra-de-pesquisa">
+					<input id="pesquisa22" placeholder="O que você está procurando?" type="text" name="pesquisa"/>
+				</li>
+				<!-- <li><a href="#">(NOME DO LOGIN)</a></li> -->
+				<!-- <li><a href="pag/login.html"><input id="botao-login22" type="button" value="entrar"></a></li> -->
+				<li id="li-botao-compra"><a href="../../pag/carrinho.html"><input id="botao-carrinho-de-compras" type="button" value="Meu carrinho"></a></li>
+				<li><span>(NOME DO LOGIN)</span></li>
+				<li><a href="../../pag/entrar/login.html">LOGIN</a></li>
+			</ul>
+		</nav>
+
+
+	<!-- Barra Botton -->
+
+			<div class="cabeçario-botton">
+				<ul>
+					<a href="../../index.html">
+						<img style="margin-left: 70px; margin-top: 8px;" id="logo" src="../../img/logo.png" alt="Logo">
+					</a>
+					<li style="margin-top: 16px;">
+						<span style="margin-left: 15px;">SM Mercearia</span>
+					</li>
+				</ul>
+			</div>
+			
+		<script>
+			// Sistema de Borda hover da barra de pesquisa
+				var pesquisa22 = document.getElementById('pesquisa22');
+
+					pesquisa22.addEventListener('focus',()=>{
+						pesquisa22.style.borderColor = "green";
+					});
+					pesquisa22.addEventListener('blur',()=>{
+						pesquisa22.style.borderColor = "#4e4e53";
+					});
+		</script>
+		<br><br>
+
+	<!-- Cartalago -->
+
+			<!-- Java esquema do carrinho de compras -->
+		<script type="text/javascript" src="../../java-carrinho.js"></script>
+
+		<div id="apresenta-car">
+			<h2>Setor de Alimentos:</h2>
+			<h5>Todas as Imagens do catálogo de produtos são ILUSTRATIVAS</h5>
+		</div>	
+
+		<br>
+
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/leite.jpg" alt="Leite">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Leite Integral Piracanjuba</p><p>Caixa 1L</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 4,60</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade1"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Leite Integral Piracanjuba, Caixa 1L ', document.getElementById('quantidade1').value, '4.60', 1)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/tempero-sazon.jpg" alt="Tempero para Carnes Sazón Pacote">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Tempero para Carnes Sazón</p><p>Pacote 60g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 3,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade15"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tempero para Carnes Sazón Pacote, Pacote 60g ', document.getElementById('quantidade15').value, '3.99', 15)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/arroz-buriti.jpg" alt="Arroz Buriti">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Arroz Parboilizado Buriti</p><p>Pacote 1kg</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 5,39</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade3"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Arroz Parboilizado Tipo 1 Buriti, Pacote 1kg ', document.getElementById('quantidade3').value, '5.39', 3)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/bala-fini.jpg" alt="Bala Fini">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Bala Fini Tube Morango</p><p>Pacote 80g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 5,49</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade4"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Bala Regaliz Morango Fini Tube, Pacote 80g', document.getElementById('quantidade4').value, '5.49', 4)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/biscoito-bauducco.jpg" alt="Biscoito Bauducco">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Biscoito Cereale Bauducco</p><p>Pacote 170g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 3,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade5"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Biscoito Cereale Bauducco, Pacote 170g', document.getElementById('quantidade5').value, '3.99', 5)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br><br>
+
+		<section class="area-cartalogo">
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/cafe-3coracoes.jpg" alt="Cafe 3 Coracoes">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Café 3 Tradicional Corações</p><p>Pacote 500g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 14,89</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade6"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Café Tradicional 3 Corações, Pacote 500g', document.getElementById('quantidade6').value, '14.89', 6)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/chocolate-hersheys.jpg" alt="Chocolate Hershey's">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Barra de Chocolate Hershey's</p><p>Pacote 92g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 4,69</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade7"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Barra de Chocolate ao Leite Hersheys, Pacote 92g', document.getElementById('quantidade7').value, '4.69', 7)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/feijao-super-caldo.jpg" alt="Feijao Super Caldo">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Feijao Super Caldo Preto</p><p>Pacote 1Kl</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 6,99</span><span id="cada">Cada</span><input style="margin-left: 24px" type="number" value="1" min="1" max="20" id="quantidade8"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Feijao Super Caldo Preto, Pacote 1Kl ', document.getElementById('quantidade8').value, '6.99', 8)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/nescau.jpg" alt="Nescau">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Achocolatado em Pó Nescau</p><p>Pacote 550g</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 12,50</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade9"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Achocolatado em Pó Nescau Nestlé, Pacote 550g ', document.getElementById('quantidade9').value, '12.50', 9)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="cartalogo-box">
+				<div><img src="../../img/img-prod/alimentos/ovos.jpg" alt="Ovo Branco">
+				</div>
+				<form>
+					<div class="informa">
+						<ul>
+							<li><p style="padding-bottom: 0px;">Ovo Branco</p><p>Brandeja 30 Unidades</p></li>
+						</ul>
+					</div>
+					<div class="preco quantidade-es">
+						<ul><span>R$ 19,99</span><span id="cada">Cada</span><input style="margin-left: 13px" type="number" value="1" min="1" max="20" id="quantidade10"></ul>
+					</div>
+					<div class="botao">
+						<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Ovo Branco, Brandeja 30 Unidades ', document.getElementById('quantidade10').value, '19.99', 10)">Adicionar ao carrinho</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<br><br><br>
+
+		<br><br>
+
+	<!-- Rodape -->
+
+		<footer>
+			<div class="wrapper">
+				<div class="rodape-box">
+					<div class="logo-rodape">
+						<img width="60%" src="../../img/logo.png" alt="Logo">
+						<h2><b>SM Mercearia</b></h2>
+						<p>Pronto alimentício em geral.</p><br><br>
+						<p style="padding-top: 74px">Vanderlei Marquezin</p>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<div class="artigos-rodape">
+						<h2>Formas de Pagamento</h2>
+						<ul class="rodape-lista rodape-artigo-lista">
+							<li>
+								<p>Dinheiro ou débito e crédito.</p>
+								<p>Também aceitamos cartão alimentação refeição e restaurante.</p>
+								<span>
+									<img width="18%" style="padding-top: 15px; padding-left: 15px" src="../../img/bandeiras de cartões/mastercard.png">
+									<img width="28%" style="padding-bottom: 3px; padding-left: 12px" src="../../img/bandeiras de cartões/elo 2.png">
+									<img width="28%" style="padding-bottom: 12px; padding-left: 10px" src="../../img/bandeiras de cartões/visa.png">
+								</span>
+							</li>
+						</ul>
+						<h2 id="h2-hover" style="padding-top: 40px"><a href="../horario-atendimento.html">Horário de Atendimento</a></h2>
+						<h2  id="h2-hover" style="padding-top: 10px"><a href="../SAC.html">SAC</a></h2>
+					</div>
+				</div>
+				<div class="rodape-box">
+					<h2>Siga-nos nas redes sociais</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.facebook.com" target="_blank">
+								<i class="fa-brands fa-facebook-square"></i>
+								<span >Facebook</span>
+							</a>
+							<a href="https://www.instagram.com" target="_blank">
+								<i style="margin-left: 53px" class="fa-brands fa-instagram-square"></i>
+								<span>Instagram</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Endereço</h2>
+					<ul class="rodape-lista">
+						<li>
+							<a href="https://www.google.com/maps/place/SM+Mercearia/@-25.3841133,-49.2341483,15z/data=!4m5!3m4!1s0x0:0x2996bcd377053781!8m2!3d-25.3841133!4d-49.2341483" target="_blank">
+								<i class="fa-solid fa-location-dot"></i>
+								<span>Rua Fernando Noronha, 190 Santa Cândida</span>
+							</a>
+						</li>
+					</ul>
+					<h2>Contatos</h2>
+					<ul class="rodape-lista">
+						<li id="whats">
+							<i class="fa-solid fa-square-phone"></i>
+							<span>(41) 3357-8376</span>
+							<i class="fa-brands fa-whatsapp-square"></i>
+							<span>(41) 99206-8350</span>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="rodape-final">
+				<div class="wrapper">
+					<p id="nomes-rodape">Eros Netto Antunes</p>
+					<p>João Vitor Ferreira Ribas</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

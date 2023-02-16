@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../css/login/estilo-login.css">
+        <!-- Icone na Barra-->
+		<link rel="icon" href="../../icones/logo_icone.ico">
+		<title>SM Mercearia | Login</title>
+    </head>
+	<body>
+		<section class="area-login">
+			<div class="login">
+				<div><a href="../../index.html"><img src="../../img/logo-verde.png" alt="Logo SM Mercearia"></a>
+				</div>
+				<form>
+					<input type="text" id="login" name="nome" placeholder="Nome de usuario" autofocus>
+					<input type="password" id="senha" placeholder="Senha">
+					<ul class="mostrar">
+						<li id="texto1">
+							<input type="checkbox" onclick="mostrarOcultarSenha()">
+						</li>
+						<li id="texto2">
+							<span>Mostrar senha</span>
+						</li>
+					</ul>
+					<input id="botao" type="button" value="entrar" onclick="logar(); return false" autofocus>
+				</form>
+				<p id="esqueceu"><a href="#">Esqueceu a senha?</a></p>
+				<p id="link-criar">Ainda não tem uma conta?<a  href="criar-conta.html">Criar conta</a></p>
+			</div>
+		</section>
+
+		<script>
+				 // Mostrar ou Ocultar a Senha
+			function mostrarOcultarSenha(){
+				var senha=document.getElementById('senha');
+
+				if(senha.type=="password"){
+					senha.type="text";
+				}else{
+					senha.type="password";
+				}
+			}
+
+			// Login
+			let usuario2 = document.querySelector('#login')
+			let senha11 = document.querySelector('#senha')
+			let validlogin = false
+			let validsenha = false
+
+			usuario2.addEventListener('keyup', () => {
+				if (usuario2.value.length <= 3){
+					usuario2.style.borderColor = "red";
+					validlogin = false
+				} else {
+					usuario2.style.borderColor = "green";
+					validlogin = true
+				}
+			})
+
+			senha11.addEventListener('keyup', () => {
+				if (senha11.value.length <= 5){
+					senha11.style.borderColor = "red";
+					validsenha = false
+				} else {
+					senha11.style.borderColor = "green";
+					validsenha = true
+				}
+			})
+
+			// Sistema de Validação de Login
+			function logar(){
+				var login=document.getElementById('login').value;
+				var senha=document.getElementById('senha').value;
+
+				if (validsenha && validlogin) {
+					if(login =="admin" && senha == "admin1"){
+						location.href = "../../index.html"
+					}else{
+						alert('Usuario ou Senha incorretos');
+					}
+				} else {
+					alert('Preencha todos os campos!')
+				}	
+			}
+
+			// // Sistema de Borda hover
+			// 	var login = document.getElementById('login');
+			// 	var senha = document.getElementById('senha');
+
+			// 		login.addEventListener('focus',()=>{
+			// 			login.style.borderColor = "green";
+			// 		});
+			// 		login.addEventListener('blur',()=>{
+			// 			login.style.borderColor = "#4e4e53";
+			// 		});
+
+			// 		senha.addEventListener('focus',()=>{
+			// 			senha.style.borderColor = "green";
+			// 		});
+			// 		senha.addEventListener('blur',()=>{
+			// 			senha.style.borderColor = "#4e4e53";
+			// 		});
+		</script>
+   </body>
+</html>
